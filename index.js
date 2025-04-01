@@ -28,7 +28,7 @@ app.get("/api/:date?", function (req, res) {
 
   if (!date) {
     const currentTime = Date.now();
-    const utcdate = new Date(r).toUTCString();
+    const utcdate = new Date(currentTime).toUTCString();
     return res.json({ unix: currentTime, utc: utcdate });
   }
 
